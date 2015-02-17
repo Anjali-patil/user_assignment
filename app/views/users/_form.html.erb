@@ -1,0 +1,184 @@
+    <%= form_for @user,  :id =>"pro-form ", :html => { :onsubmit=>"return myFunction;"},:class=>"form-horizontal pro-form " do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<!--  Ragistration button-->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> ragistration
+	</button>
+ 
+  <!-- popup box-->    
+   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+     
+ <!-- progress bar-->
+    <div class="progress-wrap">
+    <progress max="100" value="0" id="progress"></progress>
+    <div class="progress-message" id="progress-message">The form, it wants you.</div>
+  </div>
+  
+<!-- error box-->
+    <div  id="error" style="display: none"></div>
+    
+	<!-- close box-->
+	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	
+	<!-- user Ragistration -->
+<div>
+<table class= "user_table ">
+	
+	
+    
+	<tr>
+	  <td>First Name </td>
+       <td><input type="text" name="new_user[first_name]" id="first_name" required /></td>
+   		 </tr>
+  
+  <tr>
+	  <td>Last Name </td>
+       <td><input type="text" name=" new_user[last_name]" id="last_name" required /></td>
+    	</tr>
+     
+ <tr>
+    <td>Gender</td><br />
+   <td><input type="radio" name="new_user[gender]" id="gender"  value="male" required value="1">Male
+       <input type="radio" name="new_user[gender]" id="gender" value="female" >Female</td>
+   		</tr>
+   
+   <tr>
+	  <td>Birth date </td>
+       <td><input type="text" name="new_user[birth_date]" id="datepicker" onkeyup="checkDate()" required/>
+       	<td id="datewarn"></td>
+             </td>
+             </tr>
+  
+   <tr>
+    	<td> age </td>
+        	<td><input type="text" name="new_user[age]" id="age" required/></td>
+    	 </tr>
+    
+     <tr>
+    	<td> Address </td>
+    	<td><textarea name="new_user[address]" maxlength="100" ></textarea></td>
+        	 </tr>
+    
+   
+    <tr>
+    <td>Qualification Field </td><br />
+   <td><input type="radio" name="new_user" id="science" value="science">Science
+       <input type="radio" name="new_user" id="commerce" value="commerce">Commerce
+       <input type="radio" name="new_user" id="arts" value="arts">Arts
+       <input type="radio" name="new_user" id="diploma" value="diploma">Diploma</td>
+           </tr>
+   
+   
+  <tr>
+   	<td> Contact Number </td>
+        	<td><input type="text_area" name="new_user[contact_no]" id="contact_no"  required/></td>
+        	</tr>
+    
+ <tr>
+ 	<td>Subject</td>
+ 	<td><select name="new_user" id="science_list" multiple="multiple"  style="display: none">
+ 		<option> Electronics  </option>
+ 		<option> Physics </option>
+ 		<option> Chemistry </option>
+ 		<option> I.T </option>
+ 		<option> English  </option>
+ 		</select>
+ 		<select name="new_user" id="commerce_list" multiple="true" style="display: none" >
+ 		<option> Acounts </option>
+ 		<option> Tally </option>
+ 		<option> Mathematics </option>
+ 		<option> English </option>
+ 		<option> Marathi  </option>
+ 		</select>
+ 			<select name="new_user" id="arts_list" multiple="true" style="display: none" >
+ 		<option> Marathi </option>
+ 		<option> English </option>
+ 		<option> History </option>
+ 		<option> Home Science </option>
+ 		<option> Computer  </option>
+ 		</select>
+ 		
+ 		<select name="new_user" id="diploma_list" multiple="true" style="display: none" >
+ 		<option> English </option>
+ 		<option> Physics</option>
+ 		<option> Mathematics </option>
+ 		<option> Electronics </option>
+ 		<option>  Mecanical </option>
+ 		</select></td>
+           </tr>
+   
+   <tr>
+  	  <td> Sequrity Question </td>
+  	  	<td>
+	<select  id="sequrity question"  name="new_user[sec_que]" required>
+  <option value="">-Select Question--</option>
+  <option value="1">What is your nick name?</option>
+  <option value="2">What time of the day were you born?</option>
+  <option value="3">What is primary school name? </option>
+  <option value="4">What is the name of your favorite childhood friend? </option>
+  <option value="5">Which is your favorite game? </option>
+    </select></td>
+           </tr>
+ 
+ <tr>
+    <td> Answer </td>
+        	<td><input type="text" name="new_user[answer]" id="answer" required /></td>
+   	   </tr>
+  
+ <tr>
+    	<td> Email Id </td>
+        	<td><input type="text" name="new_user[email.id]" id="email_id"  required /></td>
+   	    </tr>
+   	    
+   <tr>
+    	<td> Password</td>
+        	<td><input type="password" name="new_user[password]" id="password" placeholder="password" required/></td>
+   	      </tr>
+   	 
+   	 
+   <tr>
+        <td> Confirm Password </td>
+        	<td><input type="password" name="new_user[confirm_password]" id="confirm_password" placeholder="Confirm Password" required/></td>
+    	   </tr>
+  
+  <!-- Upload Image -->
+	<tr><td>Upload Image</td>
+	<td>
+		<img id="myimage" height="50" width="50">
+ 		 <div class="form-group">
+         <input id="file-0a" class="file" type="file" > </div> 
+         </td>
+    		</tr>
+  	
+    <tr>
+  	<td colspan="2"><input type="submit" name="Submit" onclick="return myFunction()" value=" submit" id="sub">  </td>	
+		 </tr>
+		 
+    </div>
+  </table>
+   </div>
+ </div>
+  </div>
+</div>
+
+<%end%>
+<div id="img_container">
+	<img src="/assets/registration.jpg"  align="bottom" class="bottom_img" >
+
+</div>
+
+<div id="footer">
+<%= link_to 'Back', users_path %>
+
+

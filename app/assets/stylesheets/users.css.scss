@@ -1,0 +1,290 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.user_table {
+    //margin: -44px auto;
+    border: 2px solid;
+     background: #dddddd;
+     padding-top: 15px;
+     margin-top: -68px; 
+     margin-right: 38px; 
+     margin-left: 38px; 
+     border-left-width: 2px;
+    table, td, th {
+    //border: 1px solid black;
+   pading: 10px,10px,10,10px;
+   
+    padding: 15px;
+ 
+    }
+}
+
+
+
+.table-striped{
+  background:   #E6E6FA;
+ 
+}
+
+ .table-hover:hover >tbody > tr:hover{
+    background:   #D3D3D3;
+   
+ }
+  .table-striped > tbody > tr:nth-of-type(2n+1) {
+     background: #FFA07A
+      
+  }
+
+.table-bordered > tbody > tr > td,
+ .table-bordered > tbody > tr > th, 
+ .table-bordered > tfoot > tr > td, 
+ .table-bordered > tfoot > tr > th, 
+ .table-bordered > thead > tr > td, 
+ .table-bordered > thead > tr > th{
+   
+   border: 2px solid    #A9A9A9;
+    line-height: 2;
+    padding: 0px;
+   
+ }
+ .table-bordered{
+   
+    border-radius: 25px !important;
+ }
+ 
+ 
+  .ui-datepicker
+  {
+    background-color:white !important;
+    
+  }
+  
+ .ui-progressbar{
+   background :white !important;
+ } 
+
+ 
+
+
+#error{
+ align: center;
+ font-size:12px;
+ color:red;
+ width: 450px;
+ padding-bottom: 0;
+ margin-bottom: 20px;
+ border: 2px solid #a1a1a1;
+  padding: 10px 40px; 
+  background: #dddddd;
+   width: 300px;
+   border-radius: 25px;
+}
+
+.pro-form {
+  width: 350px;
+  border-radius: 20px;
+   //background(linear-gradient(#268ad0, #59c1d4));
+  padding: 2px 20px 20px 20px;
+  .field {
+    margin: 0 0 10px 0;
+    input[type=text], input[type=number] {
+      width: 100%;
+    }
+  }
+}
+.progress-wrap {
+  text-align: center;
+  font-size: 13px;
+  color:  #696969;
+  margin: 0 0 20px 0;
+  progress {
+    width: 100%;
+    margin: 0 0 5px 0;
+  }
+}
+.progress-wrap progress{
+  width:50%;
+  height: 14px; 
+  width: 507px; 
+  margin-top: 8px;
+}
+#menu_container{
+  margin: -2px 6px 1px 4px; 
+  border-bottom-width: 1px;
+  
+   height: 36px;
+
+}
+
+#menu {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 3px 2px 3px #333333;
+    background-color:   #696969;
+        border-radius: 4px;
+       
+}
+#menu ul {
+    height: auto;
+    padding: 8px 0px;
+    margin: 10px;
+}
+
+
+#menu li {
+display: inline !important;
+padding: 35px !important;
+position:relative;
+
+}
+
+#menu a {
+    text-decoration: none;
+    color:  #FFFAF0;
+    padding: 20px;
+    
+}
+#menu a:hover {
+    color:    #E6E6FA;
+    background-color: #FFF;
+    height: 10px;
+    width:10px;
+}
+
+.modal-content{
+   
+   overflow-y: scroll;
+   
+  width: 653px; 
+  height: 700px;
+   margin: 46px 6px 77px -3px;
+   padding-bottom:42px;
+}
+   
+
+
+#myModal{
+  overflow:scroll!important;
+}
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 40%;
+      margin: auto;
+    }
+    
+.item 
+{
+  height:10%;
+}
+
+.td.h1, .h2, .h3, h1, h2, h3{
+   margin-bottom: 10px;
+    margin-top: -7px;
+   
+}
+//image album
+.carousel-indicators {
+   margin-bottom:-10 !important;
+   height:15px;
+}
+//css for close btn
+.btn {
+  height: 24px;
+   
+  padding-right: 15px; 
+  margin-top: -80px; 
+  padding-bottom: 0px; 
+ // margin-right: 80px; 
+  
+  margin-bottom: -29px;
+  margin-right: 10px; 
+  margin-left: 580px; 
+  margin-bottom: -39px; 
+  padding-top: 1px;
+}
+//close btn
+.btn-default {
+  margin-top: -116px;
+}
+//css for browse btn
+.btn-primary{
+  margin-top: -92px;
+  margin-bottom: -27px; 
+  height: 19px; 
+  padding-left: 10px;
+  padding-right:10px; 
+  padding-bottom:4px;
+  padding-top:3px;
+  border-bottom-width: 0px;
+   margin-left: 840px;
+   height:30px;
+ 
+}
+//css for browse btn
+ .btn-file{
+   margin-top: -42px;
+    margin-bottom: -40px;
+     padding-bottom: 9px; 
+     height: 35px;
+      width: 80px;
+
+ }
+//back link
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+     height: 45px;
+}
+
+#sub
+{
+    padding-top: 5px;
+    padding-bottom: 4px;
+    padding-right: 12px;
+    width: 67px; 
+     margin-top: 0px;
+     margin-right: 6px;
+     margin-left: 207px; 
+}
+.fileinput-remove-button{
+  padding-top: 4px;
+   margin-top: -26px;
+}
+.fileinput-upload-button{
+  margin: -28px 69px -34px -76px; 
+  padding: 3px 1px 3px 0px; 
+  width: 86px; 
+  height: 28px;
+  position:auto;
+
+}
+.progress-message{
+ height: 11px;
+}
+.input-group-btn{
+  padding-top: 3px;
+}
+
+#img_container{
+  width: 910px; 
+  height: 224px; 
+  padding-top: 2px; 
+  margin-top: 172px; 
+  margin-bottom: -41px; 
+  padding-bottom: 0px;
+}
+
+.bottom_img{
+  
+   opacity: 0.9;
+   filter: alpha(opacity=40); 
+}

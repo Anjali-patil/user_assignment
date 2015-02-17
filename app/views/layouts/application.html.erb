@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Userinformation</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <div id="menu_container">
+<div id="menu">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+</div>
+</div>
+<%= yield %>
+</body>
+</html>

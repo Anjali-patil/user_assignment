@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Userinformation</title>
+  <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/bootstrap-theme.min.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/bootstrap.min.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/fileinput.min.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/jquery-ui.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/jquery-ui.min.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/jquery-ui.structure.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/jquery-ui.structure.min.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/scaffolds.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/users.css?body=1" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-transition.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-alert.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-modal.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-tab.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-popover.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-button.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-affix.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap.js?body=1" type="text/javascript"></script>
+<script src="/assets/Chart.Bar.js?body=1" type="text/javascript"></script>
+<script src="/assets/Chart.Line.js?body=1" type="text/javascript"></script>
+<script src="/assets/Chart.js?body=1" type="text/javascript"></script>
+<script src="/assets/Chart.min.js?body=1" type="text/javascript"></script>
+<script src="/assets/bootstrap.js?body=1" type="text/javascript"></script>
+<script src="/assets/fileinput.min.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery-ui.min.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.validate.min.js?body=1" type="text/javascript"></script>
+<script src="/assets/users.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="sR+GpsxpgXOKVY10u3s0saJI+n2Ag6LFVLIogojLYLw=" name="csrf-token" />
+</head>
+<body>
+<div id="menu">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+
+</div>
+<h1>New user</h1>
+
+
+
+  
+    
+<form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post" onsubmit="return myFunction;"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="sR+GpsxpgXOKVY10u3s0saJI+n2Ag6LFVLIogojLYLw=" /></div>
+    
+
+<a data-toggle="lightbox" href="#demoLightbox">Open Lightbox</a>
+<div id="demoLightbox" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
+    <div class='lightbox-dialog'>
+        <div class='lightbox-content'>
+            <table>
+            	<tr>
+            <td><h1> welcome</h1></td>
+            	</tr>
+            </table>
+            
+            <div class='lightbox-caption'>
+                Your caption here
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="progress-wrap">
+<progress max="100" value="0" id="progress"></progress>
+    <div class="progress-message" id="progress-message">The form, it wants you.</div>
+</div>
+
+  
+
+ 
+
+   
+ <div  id="error" style="display: none"></div>
+<table class= "user_table ">
+	<tr>
+		<td>Upload Image</td>
+		<td>
+		<img id="myimage" height="50">
+ 		 <div class="form-group">
+                    <input id="file-0a" class="file" type="file">
+                </div>
+                </td>
+	<tr>
+	  <td>First Name </td>
+       <td><input type="text" name="new_user[first_name]" id="first_name" required /></td>
+    </tr>
+  
+  <tr>
+	  <td>Last Name </td>
+       <td><input type="text" name=" new_user[last_name]" id="last_name" required /></td>
+    </tr>
+     
+ <tr>
+    <td>Gender</td><br />
+   <td><input type="radio" name="new_user[gender]" id="gender"  value="male" required value="1">Male<br>
+       <input type="radio" name="new_user[gender]" id="gender" value="female" >Female</td>
+   </tr>
+   
+   <tr>
+	  <td>Birth date </td>
+       <td><input type="text" name="new_user[birth_date]" id="datepicker" onkeyup="checkDate()"/>
+       	<td id="datewarn"></td>
+       </td>
+    </tr>
+  
+   <tr>
+    	<td> age </td>
+        	<td><input type="text" name="new_user[age]" id="age" required/></td>
+   	 </tr>
+    
+   <tr>
+    	<td> Address </td>
+    	<td><textarea name="new_user[address]" maxlength="100" ></textarea></td>
+        	
+   	 </tr>
+    
+   
+    <tr>
+    <td>Qualification Field </td><br />
+   <td><input type="radio" name="new_user" id="science" value="science">Science
+       <input type="radio" name="new_user" id="commerce" value="commerce">Commerce
+       <input type="radio" name="new_user" id="arts" value="arts">Arts
+       <input type="radio" name="new_user" id="diploma" value="diploma">Diploma</td>
+   </tr>
+   
+   
+  <tr>
+   	<td> Contact Number </td>
+        	<td><input type="text_area" name="new_user[contact_no]" id="contact_no"  required/></td>
+   </tr>
+    
+ <tr>
+ 	<td>Subject</td>
+ 	<td><select name="new_user" id="science_list" multiple="multiple"  style="display: none">
+ 		<option> Electronics  </option>
+ 		<option> Physics </option>
+ 		<option> Chemistry </option>
+ 		<option> I.T </option>
+ 		<option> English  </option>
+ 		</select>
+ 		<select name="new_user" id="commerce_list" multiple="true" style="display: none" >
+ 		<option> Acounts </option>
+ 		<option> Tally </option>
+ 		<option> Mathematics </option>
+ 		<option> English </option>
+ 		<option> Marathi  </option>
+ 		</select>
+ 			<select name="new_user" id="arts_list" multiple="true" style="display: none" >
+ 		<option> Marathi </option>
+ 		<option> English </option>
+ 		<option> History </option>
+ 		<option> Home Science </option>
+ 		<option> Computer  </option>
+ 		</select>
+ 		
+ 		<select name="new_user" id="diploma_list" multiple="true" style="display: none" >
+ 		<option> English </option>
+ 		<option> Physics</option>
+ 		<option> Mathematics </option>
+ 		<option> Electronics </option>
+ 		<option>  Mecanical </option>
+ 		</select> 
+  </td>
+  </tr>
+   
+   <tr>
+  	  <td> Sequrity Question </th>
+  	  	<td>
+	<select  id="sequrity question"  name="new_user[sec_que]">
+  <option value="">-Select Question--</option>
+  <option value="1">What is your nick name?</option>
+  <option value="2">What time of the day were you born?</option>
+  <option value="3">What is primary school name? </option>
+  <option value="4">What is the name of your favorite childhood friend? </option>
+  <option value="5">Which is your favorite game? </option>
+</select></td>
+ </tr>
+ 
+ <tr>
+    	<td> Answer </td>
+        	<td><input type="text" name="new_user[answer]" id="answer" required /></td>
+   	 </tr>
+  
+ <tr>
+    	<td> Email Id </td>
+        	<td><input type="text" name="new_user[email.id]" id="email_id"  required /></td>
+   	 </tr>
+ <tr>
+    	<td> Password</td>
+        	<td><input type="password" name="new_user[password]" id="password" placeholder="password" required/></td>
+   	 </tr>
+   	 
+   	 
+ <tr>
+    <td> Confirm Password </td>
+        	<td><input type="password" name="new_user[confirm_password]" id="confirm_password" placeholder="Confirm Password" required/></td>
+   	 </tr>
+  <tr>
+  	
+    	
+ <tr>
+  	<td colspan="2"><input type="submit" name="Submit" onclick="return myFunction()" value=" submit" id="sub">  </td>	
+		
+
+    </tr>
+    </div>
+  </table>
+
+</form>
+ 
+
+<a href="/users">Back</a>
+
+ 
+	
+
+
+</body>
+</html>
