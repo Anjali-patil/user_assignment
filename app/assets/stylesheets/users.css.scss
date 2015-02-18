@@ -6,8 +6,9 @@
 
 .user_table {
     //margin: -44px auto;
-    border: 2px solid;
-     background: #dddddd;
+   // border: 2px solid;
+    border-radius:29px;
+     background: #FAFAD2;
      padding-top: 15px;
      margin-top: -68px; 
      margin-right: 38px; 
@@ -17,7 +18,7 @@
     //border: 1px solid black;
    pading: 10px,10px,10,10px;
    
-    padding: 15px;
+    padding: 13px;
  
     }
 }
@@ -127,7 +128,9 @@
     font-weight: bold;
     text-align: left;
     text-shadow: 3px 2px 3px #333333;
-    background-color:   #696969;
+    background-color: #87CEFA;
+    border: 3px solid;
+    border-color: #708090;
         border-radius: 4px;
        
 }
@@ -161,7 +164,9 @@ position:relative;
 .modal-content{
    
    overflow-y: scroll;
-   
+   background:#87CEFA;
+   border: 3px solid;
+   border-color:#778899;
   width: 653px; 
   height: 700px;
    margin: 46px 6px 77px -3px;
@@ -284,7 +289,10 @@ position:relative;
 }
 
 .bottom_img{
-  
-   opacity: 0.9;
-   filter: alpha(opacity=40); 
+  height: 279px; 
+  width: 994px; 
+  margin-left: -8px; 
+  margin-right: -7px;
+   opacity: 0.73;
+   
 }
