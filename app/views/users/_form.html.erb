@@ -1,3 +1,4 @@
+   <div class="fulldiv">
     <%= form_for @user,  :id =>"pro-form ", :html => { :onsubmit=>"return myFunction;"},:class=>"form-horizontal pro-form " do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -11,11 +12,13 @@
     </div>
   <% end %>
 <!--  Ragistration button-->
+
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> ragistration
 	</button>
  
   <!-- popup box-->    
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="divname"> New Ragistration </div>
     <div class="modal-dialog">
     <div class="modal-content">
      
@@ -30,13 +33,14 @@
     
 	<!-- close box-->
 	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	
 	<!-- user Ragistration -->
-<div>
+
 <table class= "user_table ">
+		<tr>
+	  <td colspan="2" class="userheding"> *Fill User Basic Information <td>
+       </tr>
+       
 	
-	
-    
 	<tr>
 	  <td>First Name </td>
        <td><input type="text" name="new_user[first_name]" id="first_name" required /></td>
@@ -55,8 +59,9 @@
    
    <tr>
 	  <td>Birth date </td>
-       <td><input type="text" name="new_user[birth_date]" id="datepicker" onkeyup="checkDate()" required/>
+       <td><input type="text" name="new_user[birth_date]" id="datepicker" onkeyup="checkDate()"/>
        	<td id="datewarn"></td>
+
              </td>
              </tr>
   
@@ -66,10 +71,9 @@
     	 </tr>
     
      <tr>
-    	<td> Address </td>
-    	<td><textarea name="new_user[address]" maxlength="100" ></textarea></td>
-        	 </tr>
-    
+	  <td colspan="2" class="userheding"> *Fill User Qualification Details <td>
+       </tr>
+       
    
     <tr>
     <td>Qualification Field </td><br />
@@ -79,12 +83,6 @@
        <input type="radio" name="new_user" id="diploma" value="diploma">Diploma</td>
            </tr>
    
-   
-  <tr>
-   	<td> Contact Number </td>
-        	<td><input type="text_area" name="new_user[contact_no]" id="contact_no"  required/></td>
-        	</tr>
-    
  <tr>
  	<td>Subject</td>
  	<td><select name="new_user" id="science_list" multiple="multiple"  style="display: none">
@@ -117,6 +115,25 @@
  		<option>  Mecanical </option>
  		</select></td>
            </tr>
+           
+             <tr>
+	  <td colspan="2" class="userheding"> *Fill User Contact Details <td>
+       </tr>
+           
+           <tr>
+    	<td> Address </td>
+    	<td><textarea name="new_user[address]" maxlength="100" ></textarea></td>
+        	 </tr>
+    
+            <tr>
+   	<td> Contact Number </td>
+        	<td><input type="text_area" name="new_user[contact_no]" id="contact_no"  required/></td>
+        	</tr>
+   
+     <tr>
+	  <td colspan="2" class="userheding"> *Fill user Login Details <td>
+       </tr>
+           
    
    <tr>
   	  <td> Sequrity Question </td>
@@ -166,20 +183,26 @@
   	<td colspan="2"><input type="submit" name="Submit" onclick="return myFunction()" value=" submit" id="sub">  </td>	
 		 </tr>
 		 
-    </div>
   </table>
+
+
+
+
    </div>
  </div>
   </div>
-</div>
 
-<%end%>
-<div id="img_container">
+ 
+ <div id="img_container">
 	<img src="/assets/homepage.jpg"  align="bottom" class="bottom_img" >
 
 </div>
 
 <div id="footer">
+<%end%>
+
+
+<div id="footer">
 <%= link_to 'Back', users_path %>
 
-
+</div>		

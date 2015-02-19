@@ -1,21 +1,9 @@
-// date picker
- $(function() {
- var d = new Date();
-
-$( "#datepicker" ).datepicker({
-changeMonth: true,
-changeYear: true,
-  maxDate: new Date()
-});
-});
-
-
-
-
 //java script required field validetor
 function myFunction() {
  	var valid = true;
- 	var msg="* Incomplete form <br>"; 
+ 	var msg="";
+ 	document.getElementById('error').innerHTML = "";
+ 	msg="* Incomplete form <br>"; 
  	 	
  	var firstName = document.getElementById("first_name").value;
  	
@@ -144,12 +132,17 @@ function myFunction() {
         //alert(msg);
  $('#error').show(); 
  $("#error").delay(7000).fadeOut();
+
          return valid;
 		}
 
    }
 
 $(document).ready(function(){
+$( "#datepicker" ).datepicker({
+	maxDate: new Date()
+});
+ 	
 	$ .popover ;
 
  
@@ -270,7 +263,7 @@ if (numValid == 9) {
 
 
 });
-//palar chart
+//polar chart
 
 var polarData = [
 				{
@@ -312,46 +305,10 @@ var polarData = [
 					responsive:true
 				
 				});
-					var ctx = document.getElementById("chart-area2").getContext("2d");
-				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
-					
+				
+
+
 			};
 
-//2 chart
-
- var doughnutData = [
-				{
-					value: 300,
-					color:"#F7464A",
-					highlight: "#FF5A5E",
-					label: "Red"
-				},
-				{
-					value: 50,
-					color: "#46BFBD",
-					highlight: "#5AD3D1",
-					label: "Green"
-				},
-				{
-					value: 100,
-					color: "#FDB45C",
-					highlight: "#FFC870",
-					label: "Yellow"
-				},
-				{
-					value: 40,
-					color: "#949FB1",
-					highlight: "#A8B3C5",
-					label: "Grey"
-				},
-				{
-					value: 120,
-					color: "#4D5360",
-					highlight: "#616774",
-					label: "Dark Grey"
-				}
-
-			];
-			
 
 

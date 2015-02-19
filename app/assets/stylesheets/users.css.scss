@@ -2,42 +2,90 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-.user_table {
-    //margin: -44px auto;
-   // border: 2px solid;
-    border-radius:29px;
-     background: #FAFAD2;
-     padding-top: 15px;
-     margin-top: -68px; 
-     margin-right: 38px; 
-     margin-left: 38px; 
-     border-left-width: 2px;
-    table, td, th {
-    //border: 1px solid black;
-   pading: 10px,10px,10,10px;
-   
-    padding: 13px;
- 
-    }
+.divname{
+  
+ font-size:18pt;
+font-family:Georgia,'Times New Roman',helvetica,sans-serif;
+font-weight:bold;
+font-style:italic;
+color:#2F4F4F;
+ margin-top: 10px;
+ padding-top: 29px;
+ text-align: left;
 }
+
+
+.fulldiv{
+   height: 100%;
+    width: 100%;
+    left: 0;
+  //overflow: hidden;
+  //position: auto;
+}
+
+.user_table{
+  
+   background: none repeat scroll 0 0 #FAFAD2;
+    border-left-width: 2px;
+    border-radius: 6px;
+    margin-left: 41px;
+    margin-right: 30px;
+    margin-top: -64px;
+    td{
+      text-align:left;
+       padding-left: 12px;
+       padding-top:18px;
+       
+     }
+}
+ 
+  
+.userheding{
+  
+  text-align:left;
+  font-family:Georgia,'Times New Roman',helvetica,sans-serif;
+  font-style:italic;
+  font-size:14px;
+  margin-left: 6px; 
+  margin-right: -25px; 
+  padding-bottom: 5px; 
+  border-bottom-width: 0px;
+   border-bottom: 1px solid #000; 
+}
+
+
+
+  
 
 
 
 .table-striped{
-  background:   #E6E6FA;
+  background:     #5F9EA0;
  
 }
 
  .table-hover:hover >tbody > tr:hover{
-    background:   #D3D3D3;
+  background:   #FFF8DC
    
  }
   .table-striped > tbody > tr:nth-of-type(2n+1) {
-     background: #FFA07A
+
       
   }
+
+  .table > tbody > tr > td, 
+  .table > tbody > tr > th, 
+  .table > tfoot > tr > td, 
+  .table > tfoot > tr > th, 
+  .table > thead > tr > td, 
+  .table > thead > tr > th {
+    vertical-align: top;
+}
+ th {
+ padding: 5px 10px !important;  
+     text-align: center;
+     background:#A9A9A9;
+ }
 
 .table-bordered > tbody > tr > td,
  .table-bordered > tbody > tr > th, 
@@ -45,28 +93,30 @@
  .table-bordered > tfoot > tr > th, 
  .table-bordered > thead > tr > td, 
  .table-bordered > thead > tr > th{
-   
+  
+    
+  
    border: 2px solid    #A9A9A9;
     line-height: 2;
     padding: 0px;
    
  }
- .table-bordered{
+ //.table-bordered{
    
-    border-radius: 25px !important;
- }
+   // border-radius: 25px !important;
+// <div class="fulldiv">
  
- 
+// <div class="fulldiv">
   .ui-datepicker
   {
-    background-color:white !important;
+    background:white !important;
     
   }
   
  .ui-progressbar{
    background :white !important;
  } 
-
+// <div class="fulldiv">
  
 
 
@@ -102,14 +152,14 @@
   color:  #696969;
   margin: 0 0 20px 0;
   progress {
-    width: 100%;
+   // width: 100%;
     margin: 0 0 5px 0;
   }
 }
 .progress-wrap progress{
   width:50%;
   height: 14px; 
-  width: 507px; 
+ // width: 267px; 
   margin-top: 8px;
 }
 #menu_container{
@@ -160,45 +210,62 @@ position:relative;
     height: 10px;
     width:10px;
 }
-
+.modal{
+  position:relative!important;
+}
 .modal-content{
    
-   overflow-y: scroll;
+   overflow: scroll !important;
    background:#87CEFA;
    border: 3px solid;
    border-color:#778899;
-  width: 653px; 
-  height: 700px;
-   margin: 46px 6px 77px -3px;
-   padding-bottom:42px;
+  margin-top: -22px; 
+  padding-top: 0px; 
+  width: 596px;
+  //width: 100% ;
+ // height: 560;
+  //margin: 46px 6px 77px -3px;
+  //padding-bottom:42px;
+}
+#myModal{
+  margin-top: -43px;
+  height:100%;
+  width:100%;
+
+ // overflow:scroll !important ;
 }
    
 
 
-#myModal{
-  overflow:scroll!important;
-}
+
 
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 40%;
+      width: auto;
       margin: auto;
+      height:auto;
     }
     
-.item 
-{
-  height:10%;
+.table{
+  width: 751px; 
+  height: 300px;
+  margin-left: -203px;
+
 }
 
-.td.h1, .h2, .h3, h1, h2, h3{
-   margin-bottom: 10px;
-    margin-top: -7px;
+//.td.h1, .h2, .h3, h1, h2, h3{
+   //margin-bottom: 10px;
+// <div class="fulldiv">
    
-}
+//}
 //image album
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    margin: auto;
+    width: auto;
+  }
 .carousel-indicators {
    margin-bottom:-10 !important;
-   height:15px;
+   height:auto;
 }
 //css for close btn
 .btn {
@@ -211,22 +278,22 @@ position:relative;
   
   margin-bottom: -29px;
   margin-right: 10px; 
-  margin-left: 580px; 
+  margin-left: 401px; 
   margin-bottom: -39px; 
   padding-top: 1px;
 }
 //close btn
 .btn-default {
-  margin-top: -148px;
+  margin-top: -165px;
   padding-right:9px;
   background:#F5DEB3; 
- 
+ margin-left: 512px;
  
   
 }
 //css for browse btn
 .btn-primary{
-  margin-top: -92px;
+  margin-top: -97px;
   margin-bottom: -27px; 
   height: 19px; 
   padding-left: 10px;
@@ -234,7 +301,7 @@ position:relative;
   padding-bottom:4px;
   padding-top:3px;
   border-bottom-width: 0px;
-   margin-left: 840px;
+   margin-left: 819px;
    height:30px;
  
 }
@@ -288,14 +355,17 @@ position:relative;
 }
 .progress-message{
  height: 11px;
+ padding-top: 0px;
+  padding-bottom: 23px; 
+ margin-top: -8px;
 }
 .input-group-btn{
   padding-top: 3px;
 }
 
 #img_container{
-  width: 910px; 
-  height: 224px; 
+  width: 100%; 
+  height: 100%; 
   padding-top: 2px; 
   margin-top: 172px; 
   margin-bottom: -41px; 
@@ -310,3 +380,23 @@ position:relative;
    opacity: 0.73;
    
 }
+#canvas-holder{
+ 
+  width: 296px; 
+  height: 341px; 
+  margin-top: -243px; 
+  padding-right: 0px; 
+  padding-left: 0px; 
+  margin-left: 697px;
+ border-right-width: 0px;
+  position: absolute;
+    z-index: -1 !important;
+}
+
+  .file-caption{
+
+  width: 165px; 
+  padding-top: 5px; 
+  margin-top: 6px;
+}
+
