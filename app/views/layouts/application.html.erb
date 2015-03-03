@@ -9,7 +9,6 @@
 <body>
  <div id="menu_container">
 <div id="menu">
-
 <li><a href="index.html">Home</a></li>
 <li><a href="aboutus.html">About Us</a></li>
 <li><a href="services.html">Services</a></li>
@@ -19,3 +18,33 @@
 <%= yield %>
 </body>
 </html>
+ <span>
+<a href="https://www.facebook.com/login/">
+	<img alt="facebook" src="/assets/fb.jpg" align="right" style="margin-top: -128px"/>
+	</a>
+	<br />
+	<a href="https://www.google.co.in/">
+	<img alt="google" src="/assets/google_icon.jpg" align="right" style="margin-top: -109px"/>
+	</a>
+	<a href="https://twitter.com/">
+	<img alt="twitter" src="/assets/Twitter-icon.jpg" align="right" style="margin-top:-59px"/>
+	</a>
+	</span>
+	<!DOCTYPE html>
+<html>
+<head>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" style="left: 926px; right: 0px; margin-top: 0px; top: -15px;">
+</fb:login-button>
+
+<div id="status">
+</div>
+</head>
+<body>
+	<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>

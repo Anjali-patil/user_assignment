@@ -2,6 +2,8 @@
 function myFunction() {
  	var valid = true;
  	var msg="";
+ 	var date = new Date();
+ 	var cDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear();
  	document.getElementById('error').innerHTML = "";
  	msg="* Incomplete form <br>"; 
  	 	
@@ -21,15 +23,25 @@ function myFunction() {
          valid = false;
      }
      
-     
+     // var today = new date();
      var bth_date = document.getElementById("datepicker").value;
- 	
- 	
- 	   if (bth_date == null || bth_date == "") {
+     var bDate = new Date(bth_date);
+     var ncDate = new Date(cDate);
+     
+      if (bth_date == null || bth_date == "") {
          msg+="* Birth Date must be filled out <br>";
          valid = false;
-     }
-     
+        }
+        
+    
+              else if( bDate > ncDate) {
+        		
+        	    msg+="* Not a valid date<br>";
+        	    valid = false;
+        }
+     	
+       
+    
     var x = document.getElementById("age").value;
  	
  	
@@ -46,19 +58,19 @@ function myFunction() {
          valid = false;
      }
      
-    // var selectChoose = document.getElementById('science_list').value;
-   					 // alert("hi");
-            // var maxOptions = 2;
-            // var optionCount = 0;
-            // for (var i = 0; i < selectChoose.length; i++) {
-                // if (selectChoose[i].selected) {
-                    // optionCount++;
-                    // if (optionCount > maxOptions) {
-                        // msg+= "* validation failed, not submitting<br>";
-                        // valid= false;
-                    // }
-                // }
-            // }
+      var selectChoose = document.getElementById('science_list').value;
+   					   alert("hi");
+              var maxOptions = 2;
+              var optionCount = 0;
+              for (var i = 0; i < selectChoose.length; i++) {
+                  if (selectChoose[i].selected) {
+                      optionCount++;
+                      if (optionCount > maxOptions) {
+                          msg+= "* validation failed, not submitting<br>";
+                         valid= false;
+                      }
+                  }
+              }
            
        
  	 
@@ -139,10 +151,22 @@ function myFunction() {
    }
 
 $(document).ready(function(){
-$( "#datepicker" ).datepicker({
-	maxDate: new Date()
+	$( "#datepicker" ).datepicker({
+		maxDate: new Date()
+	
 });
- 	
+   
+   
+
+
+   
+   
+     
+     $("#reg").click(function(){
+   
+     $('#myModal').modal('show');
+     });
+
 	$ .popover ;
 
  
@@ -174,10 +198,14 @@ $( "#datepicker" ).datepicker({
 		$("#arts_list").hide();
 		$("#diploma_list").show();
 	});
-	$(document).ready(function() {
-		$(".fancybox").fancybox();
-	});
 	
+
+
+
+
+
+
+
 
 
 // $.noConflict();
@@ -309,6 +337,68 @@ var polarData = [
 
 
 			};
+
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '628839367262478',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'))
+   
+   
+   function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+
+
+FB.login(function(response) {
+  if (response.status === 'connected') {
+    // Logged into your app and Facebook.
+  } else if (response.status === 'not_authorized') {
+    // The person is logged into Facebook, but not your app.
+  } else {
+    // The person is not logged into Facebook, so we're not sure if
+    // they are logged into this app or not.
+  }
+});
+
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    console.log(response.authResponse.accessToken);
+  }
+});
+
+FB.api('/me', function(response) {
+    console.log(JSON.stringify(response));
+});
+
+ FB.logout(function(response) {
+        // Person is now logged out
+    });
+
+ // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+
 
 
 

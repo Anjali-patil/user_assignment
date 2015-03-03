@@ -11,14 +11,21 @@
       </ul>
     </div>
   <% end %>
-<!--  Ragistration button-->
+  <!DOCTYPE html>
+<html>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> ragistration
+<head>
+  <title>User Information</title>
+</head>
+<body>
+<!--  Registration button-->
+
+    <button type="button" class="btn btn-primary" value="#myModal" html-data-toggle="modal" id="reg" data-target="#myModal"> Registration
 	</button>
  
   <!-- popup box-->    
-   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="divname"> New Ragistration </div>
+   <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="divname"> New Registration </div>
     <div class="modal-dialog">
     <div class="modal-content">
      
@@ -32,23 +39,24 @@
     <div  id="error" style="display: none"></div>
     
 	<!-- close box-->
+	 
 	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	<!-- user Ragistration -->
-
+	<!-- user Registration -->
+<div class="centered">
 <table class= "user_table ">
 		<tr>
-	  <td colspan="2" class="userheding"> *Fill User Basic Information <td>
+	  <td colspan="4" class="userheding"> *Fill User Basic Information <td>
        </tr>
        
 	
 	<tr>
 	  <td>First Name </td>
-       <td><input type="text" name="new_user[first_name]" id="first_name" required /></td>
+       <td colspan="2"><input type="text" name="new_user[first_name]" id="first_name" required class="user_textbox" /></td>
    		 </tr>
   
   <tr>
 	  <td>Last Name </td>
-       <td><input type="text" name=" new_user[last_name]" id="last_name" required /></td>
+       <td><input type="text" name=" new_user[last_name]" id="last_name" required  class="user_textbox" /></td>
     	</tr>
      
  <tr>
@@ -59,7 +67,7 @@
    
    <tr>
 	  <td>Birth date </td>
-       <td><input type="text" name="new_user[birth_date]" id="datepicker" onkeyup="checkDate()"/>
+       <td><input type="text" name="new_user[birth_date]" id="datepicker" onkeyup="checkDate()" class="user_textbox "/>
        	<td id="datewarn"></td>
 
              </td>
@@ -67,17 +75,17 @@
   
    <tr>
     	<td> age </td>
-        	<td><input type="text" name="new_user[age]" id="age" required/></td>
+        	<td><input type="text" name="new_user[age]" id="age" required/ class=" user_textbox"></td>
     	 </tr>
     
      <tr>
-	  <td colspan="2" class="userheding"> *Fill User Qualification Details <td>
+	  <td colspan="4" class="userheding"> *Fill User Qualification Details <td>
        </tr>
        
    
     <tr>
-    <td>Qualification Field </td><br />
-   <td><input type="radio" name="new_user" id="science" value="science">Science
+    <td colspan="4">Qualification Field &nbsp; &nbsp;&nbsp;
+   <input type="radio" name="new_user" id="science" value="science">Science
        <input type="radio" name="new_user" id="commerce" value="commerce">Commerce
        <input type="radio" name="new_user" id="arts" value="arts">Arts
        <input type="radio" name="new_user" id="diploma" value="diploma">Diploma</td>
@@ -117,29 +125,29 @@
            </tr>
            
              <tr>
-	  <td colspan="2" class="userheding"> *Fill User Contact Details <td>
+	  <td colspan="4" class="userheding"> *Fill User Contact Details <td>
        </tr>
            
            <tr>
     	<td> Address </td>
-    	<td><textarea name="new_user[address]" maxlength="100" ></textarea></td>
+    	<td><textarea name="new_user[address]" maxlength="100" class="user_textbox" ></textarea></td>
         	 </tr>
     
             <tr>
    	<td> Contact Number </td>
-        	<td><input type="text_area" name="new_user[contact_no]" id="contact_no"  required/></td>
+        	<td><input type="text_area" name="new_user[contact_no]" id="contact_no"  required  class="user_textbox"/></td>
         	</tr>
    
      <tr>
-	  <td colspan="2" class="userheding"> *Fill user Login Details <td>
+	  <td colspan="4" class="userheding"> *Fill user Login Details <td>
        </tr>
            
    
    <tr>
-  	  <td> Sequrity Question </td>
-  	  	<td>
-	<select  id="sequrity question"  name="new_user[sec_que]" required>
-  <option value="">-Select Question--</option>
+  	  <td> Sequrity Question</td>
+  	  <td>	
+	<select  id="sequrity question"  name="new_user[sec_que]" required  class="user_textbox" style="margin-left: -104">
+  <option value="">--Select Question--</option>
   <option value="1">What is your nick name?</option>
   <option value="2">What time of the day were you born?</option>
   <option value="3">What is primary school name? </option>
@@ -150,29 +158,29 @@
  
  <tr>
     <td> Answer </td>
-        	<td><input type="text" name="new_user[answer]" id="answer" required /></td>
+        	<td><input type="text" name="new_user[answer]" id="answer" required class="user_textbox"/></td>
    	   </tr>
   
  <tr>
     	<td> Email Id </td>
-        	<td><input type="text" name="new_user[email.id]" id="email_id"  required /></td>
+        	<td><input type="text" name="new_user[email.id]" id="email_id"  required  class="user_textbox"/></td>
    	    </tr>
    	    
    <tr>
     	<td> Password</td>
-        	<td><input type="password" name="new_user[password]" id="password" placeholder="password" required/></td>
+        	<td><input type="password" name="new_user[password]" id="password" placeholder="password" required class="user_textbox"/></td>
    	      </tr>
    	 
    	 
    <tr>
         <td> Confirm Password </td>
-        	<td><input type="password" name="new_user[confirm_password]" id="confirm_password" placeholder="Confirm Password" required/></td>
+        	<td><input type="password" name="new_user[confirm_password]" id="confirm_password" placeholder="Confirm Password" required class="user_textbox" /></td>
     	   </tr>
   
   <!-- Upload Image -->
 	<tr><td>Upload Image</td>
 	<td>
-		<img id="myimage" height="50" width="50">
+		<img id="myimage">
  		 <div class="form-group">
          <input id="file-0a" class="file" type="file" > </div> 
          </td>
@@ -191,18 +199,21 @@
    </div>
  </div>
   </div>
-
+</div>
  
  <div id="img_container">
 	<img src="/assets/homepage.jpg"  align="bottom" class="bottom_img" >
 
 </div>
 
-<div id="footer">
+
 <%end%>
+
 
 
 <div id="footer">
 <%= link_to 'Back', users_path %>
 
-</div>		
+</div>
+</body>
+</html>	
