@@ -1,6 +1,11 @@
-
- 
-     <div class="wrapper">
+<!doctype html>
+<html lang="en">
+<head>
+<title>Pie Chart</title>
+<meta charset="utf-8">
+</head>
+<body>
+  <div class="wrapper">
             <h1>Basic carousel</h1>
 
             <p>This example shows how to setup a basic carousel with prev/next controls and pagination.</p>
@@ -8,11 +13,10 @@
             <div class="jcarousel-wrapper">
                 <div class="jcarousel">
                     <ul>
-                        <li><img src="/assets/Bunches_flow.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/assets/blue_flo.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/assets/pink_flo.jpg" width="600" height="400" alt=""></li>
-                         
-                        <li><img src="/assets/sun_flow.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="/assets/Bunches_flow.jpg" width="600" height="400" alt="" style="height: 379px; width: 580px;"></li>
+                        <li><img src="/assets/blue_flo.jpg" width="600" height="400" alt="" style="height: 379px; width: 580px;"></li>
+                        <li><img src="/assets/pink_flo.jpg" width="600" height="400" alt="" style="height: 379px; width: 580px;"></li>
+                         <li><img src="/assets/sun_flow.jpg" width="600" height="400" alt="" style="height: 379px; width: 580px;"></li>
                     </ul>
                 </div>
 
@@ -24,12 +28,14 @@
                 <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                 
                 <p class="jcarousel-pagination">
+                	
                     
                 </p>
             </div>
         </div>
 
-
+<canvas id="piechart" width="400" height="400">
+</canvas>
 <!--  static table --> 
 <div align="center">
 <table class="table table-hover table-striped table-bordered ">
@@ -130,14 +136,20 @@
   </div>
 <% end %>
 </table>
+
 </div>
 <br />
 
 <%= link_to 'New User', new_user_path %>
 <!--static chartcontrolar-->
  
- <div id="canvas-holder" style="width:30%">
-			<canvas id="chart-area" width="239px" height="276" />
 				
 </div>
 </div>
+</body>
+</html>
+
+
+
+
+

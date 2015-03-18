@@ -5,6 +5,7 @@
         $('.jcarousel-control-prev')
             .on('jcarouselcontrol:active', function() {
                 $(this).removeClass('inactive');
+                
             })
             .on('jcarouselcontrol:inactive', function() {
                 $(this).addClass('inactive');
@@ -33,4 +34,5 @@
             })
             .jcarouselPagination();
     });
+    
 })(jQuery);

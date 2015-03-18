@@ -6,7 +6,7 @@ function myFunction() {
  	var cDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear();
  	document.getElementById('error').innerHTML = "";
  	msg="* Incomplete form <br>"; 
- 	 	
+ 	 document.body.style.backgroundColor = "lightblue";
  	var firstName = document.getElementById("first_name").value;
  	
  	
@@ -58,22 +58,22 @@ function myFunction() {
          valid = false;
      }
      
-      var selectChoose = document.getElementById('science_list').value;
-   					   alert("hi");
-              var maxOptions = 2;
-              var optionCount = 0;
-              for (var i = 0; i < selectChoose.length; i++) {
-                  if (selectChoose[i].selected) {
-                      optionCount++;
-                      if (optionCount > maxOptions) {
-                          msg+= "* validation failed, not submitting<br>";
-                         valid= false;
-                      }
-                  }
-              }
-           
-       
- 	 
+      // var selectChoose = document.getElementById('science_list').value;
+//    
+              // var maxOptions = 2;
+              // var optionCount = 0;
+              // for (var i = 0; i < selectChoose.length; i++) {
+                  // if (selectChoose[i].selected) {
+                      // optionCount++;
+                      // if (optionCount > maxOptions) {
+                          // msg+= "* validation failed, not submitting<br>";
+                         // valid= false;
+                      // }
+                  // }
+              // }
+//            
+//        
+//  	 
  	    var ans = document.getElementById("answer").value;
  	 	
  	   if (ans == null || ans == "") {
@@ -142,6 +142,7 @@ function myFunction() {
    var div =document.getElementById('error');
    div.innerHTML = div.innerHTML + msg; 
         //alert(msg);
+        
  $('#error').show(); 
  $("#error").delay(7000).fadeOut();
 
@@ -157,9 +158,38 @@ $(document).ready(function(){
 });
    
    
+   
+ 
+// var c = document.getElementById("myCanvas");
+// var ctx = c.getContext("2d");
+// 
+// ctx.font = "20px Georgia";
+// ctx.strokeText("Are u new user??", 10, 50);
+// 
+// ctx.font = "30px Verdana";
 
+// // Create gradient
+// var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+// gradient.addColorStop("0", "magenta");
+// gradient.addColorStop("0.5", "blue");
+// gradient.addColorStop("1.0", "red");
+// 
+// // Fill with gradient
+// ctx.strokeStyle = gradient;
+// ctx.strokeText("Fill  form completely!", 10, 90,200);
 
    
+// hidde button register when form popup
+ $('#reg').click(function(){
+                $('#reg').toggle();
+             });
+  // serch button text
+	$("#tfq2b").click(function() {
+		if ($("#tfq2b").val() == "Search our website"){
+			$("#tfq2b").val(""); 
+		}
+	});
+
    
      
      $("#reg").click(function(){
@@ -291,52 +321,6 @@ if (numValid == 9) {
 
 
 });
-//polar chart
-
-var polarData = [
-				{
-					value: 300,
-					color:"#F7464A",
-					highlight: "#FF5A5E",
-					label: "Red"
-				},
-				{
-					value: 50,
-					color: "#46BFBD",
-					highlight: "#5AD3D1",
-					label: "Green"
-				},
-				{
-					value: 100,
-					color: "#FDB45C",
-					highlight: "#FFC870",
-					label: "Yellow"
-				},
-				{
-					value: 40,
-					color: "#949FB1",
-					highlight: "#A8B3C5",
-					label: "Grey"
-				},
-				{
-					value: 120,
-					color: "#4D5360",
-					highlight: "#616774",
-					label: "Dark Grey"
-				}
-
-			];
-
-			window.onload = function(){
-				var ctx = document.getElementById("chart-area").getContext("2d");
-				window.myPolarArea = new Chart(ctx).PolarArea(polarData, {
-					responsive:true
-				
-				});
-				
-
-
-			};
 
 
   window.fbAsyncInit = function() {
@@ -400,5 +384,12 @@ FB.api('/me', function(response) {
 
 
 
-
+function OpenPopup() {
+        document.getElementById('PopupOverlay').style.display = 'block';
+        document.getElementById('PopupWindow').style.display = 'block';
+    }
+    function ClosePopup() {
+        document.getElementById('PopupOverlay').style.display = 'none';
+        document.getElementById('PopupWindow').style.display = 'none';
+    }
 

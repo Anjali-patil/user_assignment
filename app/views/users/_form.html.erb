@@ -1,4 +1,10 @@
-   <div class="fulldiv">
+   
+   	 <!DOCTYPE html>
+<html>
+	<head>
+  <title>User Information</title>
+</head>
+<body>
     <%= form_for @user,  :id =>"pro-form ", :html => { :onsubmit=>"return myFunction;"},:class=>"form-horizontal pro-form " do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -11,21 +17,19 @@
       </ul>
     </div>
   <% end %>
-  <!DOCTYPE html>
-<html>
+ 
+ <!-- error box-->
+    <div  id="error" style="display: none"></div>
 
-<head>
-  <title>User Information</title>
-</head>
-<body>
 <!--  Registration button-->
 
-    <button type="button" class="btn btn-primary" value="#myModal" html-data-toggle="modal" id="reg" data-target="#myModal"> Registration
+    <button type="button" class="btn btn-primary"  value="#myModal" html-data-toggle="modal" id="reg" data-target="#myModal" style="background: url(/assets/registration.jpg);"> 
 	</button>
- 
+
   <!-- popup box-->    
    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="divname"> New Registration </div>
+   	
+    <span class="divname"> New Registration </span>
     <div class="modal-dialog">
     <div class="modal-content">
      
@@ -35,8 +39,7 @@
     <div class="progress-message" id="progress-message">The form, it wants you.</div>
   </div>
   
-<!-- error box-->
-    <div  id="error" style="display: none"></div>
+
     
 	<!-- close box-->
 	 
@@ -198,13 +201,12 @@
 
    </div>
  </div>
-  </div>
-</div>
- 
- <div id="img_container">
+  <!-- <canvas id="myCanvas" width="250" height="150" style="border:1px solid #d3d3d3;"> -->
+
+ <!--<div id="img_container">
 	<img src="/assets/homepage.jpg"  align="bottom" class="bottom_img" >
 
-</div>
+</div>-->
 
 
 <%end%>
@@ -213,7 +215,7 @@
 
 <div id="footer">
 <%= link_to 'Back', users_path %>
-
 </div>
 </body>
 </html>	
+</div>

@@ -1,50 +1,90 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<script src="piechart.js"></script>
+	
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+
   <title>Userinformation</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
- <div id="menu_container">
-<div id="menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="aboutus.html">About Us</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="contactus.html">Contact Us</a></li>
-</div>
-</div>
-<%= yield %>
-</body>
-</html>
- <span>
-<a href="https://www.facebook.com/login/">
-	<img alt="facebook" src="/assets/fb.jpg" align="right" style="margin-top: -128px"/>
-	</a>
-	<br />
+	<nav class="nav">
+<ul style="width: 1178px; height: 50px">
+		<li><a href="#" style="padding-top: 13px;">Home</a></li>
+		<li><a href="#" style="padding-top: 13px;">Tutorials</a>
+		        <ul>
+				<li><a href="#">Photoshop</a></li>
+				<li><a href="#">Illustrator</a></li>
+				<li><a href="#">Web Design</a>
+					<ul>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#" style="padding-top: 13px;">Articles</a>
+		        <ul>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">User Experience</a></li>
+			</ul>
+		</li>
+		<li><a href="#" style="padding-top: 13px;">Inspiration</a></li>
+	</ul>
+</nav>
+
+
+ <div  id="social_link">
+ 	
+ 		<li style="width: 46px"><a href="https://www.facebook.com/login/">
+	<img alt="facebook" src="/assets/fb.jpg" width="29px" />
+	</a></li>
+
+<li style="width: 46px">
 	<a href="https://www.google.co.in/">
-	<img alt="google" src="/assets/google_icon.jpg" align="right" style="margin-top: -109px"/>
-	</a>
+	<img alt="google" src="/assets/google_icon.jpg" width="29px"  />
+	</a></li>
+	<li style="width: 46px">
 	<a href="https://twitter.com/">
-	<img alt="twitter" src="/assets/Twitter-icon.jpg" align="right" style="margin-top:-59px"/>
-	</a>
-	</span>
-	<!DOCTYPE html>
-<html>
-<head>
-<title>Facebook Login JavaScript Example</title>
-<meta charset="UTF-8">
+	<img alt="twitter" src="/assets/twitter.png" width="29px"/>
+	</a></li>
+	</div>
+<div style="width: 182px; height: 45px; margin-top: 0px;" align="bottom !important">
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" style="left: 926px; right: 0px; margin-top: 0px; top: -15px;">
 </fb:login-button>
 
 <div id="status">
 </div>
-</head>
-<body>
+
 	<div
   class="fb-like"
   data-share="true"
   data-width="450"
-  data-show-faces="true">
+  data-show-faces="true"></div>
+  </div>
+
+
+
+
+	<!-- HTML for SEARCH BAR -->
+	
+<div id="tfheader">
+		<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" id="tfq2b" class="tftextinput2" name="q" size="21" maxlength="120" value="Search our website">
+		        <input type="submit" value="Search" class="tfbutton2">
+		</form>
+		<div class="tfclear"></div>
+	</div>
+<!-- <canvas id="piechart" width="400" height="400">
+</canvas> -->
+
+<%= yield %>
+</body>
+</html>
+
+
 </div>
